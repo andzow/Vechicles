@@ -45,6 +45,13 @@ export default {
         this.useInfoActive = item
       }, 500)
     }
+  },
+  mounted() {
+    if(this.$route.name === 'index') {
+      this.useInfoActive = "Vechicles"
+    } else {
+      this.useInfoActive = this.$route.name
+    }
   }
 }
 </script>

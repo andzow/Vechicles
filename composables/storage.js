@@ -1,4 +1,4 @@
-export const useInfoActive = () => useState("use_info_active", () => "Vechicles");
+export const useInfoActive = () => useState("use_info_active", () => "");
 export const useCarActive = () => useState("use_car_active", () => 1);
 export const useVechicles = () => useState("use_vechicles", () => []);
 export const useVin = () => useState("use_vin", () => '');

@@ -1,7 +1,7 @@
 <template>
   <section class="product">
     <div class="product__image"> 
-      <img class="product__img" :src="card.placeholder" alt="">
+      <img class="product__img" v-show="!loading" @load="handleImageLoaded" @error="handleImageError" :src="card.placeholder" alt="">
     </div>
     <h3 class="product__title">{{card.vehicle_name}}</h3>
     <p class="product__vin">WDB {{card.vin}}</p>
@@ -18,7 +18,20 @@
 export default {
     props: {
         card: Object
+    },
+    data() {
+      return {
+        loading: true
+      }
+    },
+    methods: {
+    handleImageLoaded() {
+      this.loading = false; 
+    },
+    handleImageError() {
+      this.loading = false;
     }
+  }
 }
 </script>
 

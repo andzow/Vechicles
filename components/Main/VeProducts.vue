@@ -39,7 +39,6 @@ export default {
             this.usepage = this.useVechicles.data.meta.last_page
             this.useCount = this.useVechicles.data.meta.to
             this.useCountTotal = this.useVechicles.data.meta.total
-            console.log(this.useVechicles)
         }
     },
     mounted() {
